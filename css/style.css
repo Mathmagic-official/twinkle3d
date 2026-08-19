@@ -45,16 +45,11 @@ button { font: inherit; }
 }
 
 .brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
   text-decoration: none;
   font-family: var(--serif);
   font-size: 20px;
   font-weight: 600;
 }
-
-.brand img { height: 24px; width: auto; }
 
 .nav-links {
   display: flex;
