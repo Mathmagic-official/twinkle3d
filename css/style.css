@@ -66,11 +66,12 @@ button { font: inherit; }
 
 .kicker {
   font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 0.14em;
+  /* Stays an eyebrow above the wordmark: the ceiling is far below the h1's 52px floor. */
+  font-size: clamp(14px, 1.2vw, 17px);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent);
-  margin: 0 0 16px;
+  margin: 0 0 18px;
 }
 
 h1 {
