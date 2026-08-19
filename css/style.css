@@ -105,17 +105,18 @@ h1.twinkle { letter-spacing: -0.035em; }
   font-size: clamp(24px, 2.6vw, 34px);
   color: var(--accent-2);
   margin: 0 0 22px;
+  text-wrap: balance;
 }
 
 .lead {
   color: #d8d1c3;
   font-size: 18px;
   line-height: 1.6;
-  /* Centred on the page, above the video it introduces. The measure tightens from
-     44em because ragged-both-sides text needs shorter lines to stay readable. */
   margin: 0 auto;
-  max-width: 38em;
+  max-width: 44em;
   text-align: center;
+  /* Centred text strands one or two words on the last line; pretty pulls a word down. */
+  text-wrap: pretty;
 }
 
 /* 16:9 box so the player keeps its shape at any width and nothing below it jumps. */
@@ -140,15 +141,17 @@ h1.twinkle { letter-spacing: -0.035em; }
   font-weight: 500;
   letter-spacing: -0.03em;
   margin: 0 0 10px;
+  /* Evens out the lines rather than leaving a lone word under a full one. */
+  text-wrap: balance;
 }
 
 .section-lead {
-  max-width: 68ch;
+  max-width: 50em;
   color: var(--muted);
   font-size: 17.5px;
   line-height: 1.75;
-  /* Narrower than the figures it introduces: centred text needs a shorter measure. */
   margin: 0 auto 22px;
+  text-wrap: pretty;
 }
 .section-lead strong { color: var(--text); font-weight: 600; }
 .section-lead.close { margin-top: 28px; }
