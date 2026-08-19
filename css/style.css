@@ -115,8 +115,9 @@ h1.twinkle { letter-spacing: -0.035em; }
   margin: 0 auto;
   max-width: 44em;
   text-align: center;
-  /* Centred text strands one or two words on the last line; pretty pulls a word down. */
-  text-wrap: pretty;
+  /* Short enough that browsers will balance it: every line ends up a similar length,
+     so there is no stubby last line to begin with. */
+  text-wrap: balance;
 }
 
 /* 16:9 box so the player keeps its shape at any width and nothing below it jumps. */
@@ -151,6 +152,8 @@ h1.twinkle { letter-spacing: -0.035em; }
   font-size: 17.5px;
   line-height: 1.75;
   margin: 0 auto 22px;
+  /* Too many lines for browsers to balance, so settle for avoiding a stranded last line.
+     js/typography.js binds the closing words as a floor, since pretty is best-effort. */
   text-wrap: pretty;
 }
 .section-lead strong { color: var(--text); font-weight: 600; }
