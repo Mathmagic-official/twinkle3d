@@ -104,23 +104,23 @@
    }
   },
   {
-   "id": "016_1f5868b1",
-   "input": "assets/inputs_web/016_1f5868b1.jpg",
-   "thumb": "assets/thumbs/016_1f5868b1.jpg",
+   "id": "015_9b1f0f6d",
+   "input": "assets/inputs_web/015_9b1f0f6d.jpg",
+   "thumb": "assets/thumbs/015_9b1f0f6d.jpg",
    "textured": false,
    "models": {
-    "hi3d30": "assets/models_web/016_1f5868b1/hi3d30.glb",
-    "hi3d": "assets/models_web/016_1f5868b1/hi3d.glb",
-    "meshy": "assets/models_web/016_1f5868b1/meshy.glb",
-    "rodin": "assets/models_web/016_1f5868b1/rodin.glb",
-    "tripo": "assets/models_web/016_1f5868b1/tripo.glb"
+    "hi3d30": "assets/models_web/015_9b1f0f6d/hi3d30.glb",
+    "hi3d": "assets/models_web/015_9b1f0f6d/hi3d.glb",
+    "meshy": "assets/models_web/015_9b1f0f6d/meshy.glb",
+    "rodin": "assets/models_web/015_9b1f0f6d/rodin.glb",
+    "tripo": "assets/models_web/015_9b1f0f6d/tripo.glb"
    },
    "previews": {
-    "hi3d30": "assets/previews/016_1f5868b1/hi3d30.jpg",
-    "hi3d": "assets/previews/016_1f5868b1/hi3d.jpg",
-    "meshy": "assets/previews/016_1f5868b1/meshy.jpg",
-    "rodin": "assets/previews/016_1f5868b1/rodin.jpg",
-    "tripo": "assets/previews/016_1f5868b1/tripo.jpg"
+    "hi3d30": "assets/previews/015_9b1f0f6d/hi3d30.jpg",
+    "hi3d": "assets/previews/015_9b1f0f6d/hi3d.jpg",
+    "meshy": "assets/previews/015_9b1f0f6d/meshy.jpg",
+    "rodin": "assets/previews/015_9b1f0f6d/rodin.jpg",
+    "tripo": "assets/previews/015_9b1f0f6d/tripo.jpg"
    }
   },
   {
@@ -164,43 +164,43 @@
    }
   },
   {
-   "id": "001_4a492408",
-   "input": "assets/inputs_web/001_4a492408.jpg",
-   "thumb": "assets/thumbs/001_4a492408.jpg",
-   "textured": true,
+   "id": "017_4d939565",
+   "input": "assets/inputs_web/017_4d939565.jpg",
+   "thumb": "assets/thumbs/017_4d939565.jpg",
+   "textured": false,
    "models": {
-    "hi3d30": "assets/models_web/001_4a492408/hi3d30.glb",
-    "hi3d": "assets/models_web/001_4a492408/hi3d.glb",
-    "meshy": "assets/models_web/001_4a492408/meshy.glb",
-    "rodin": "assets/models_web/001_4a492408/rodin.glb",
-    "tripo": "assets/models_web/001_4a492408/tripo.glb"
+    "hi3d30": "assets/models_web/017_4d939565/hi3d30.glb",
+    "hi3d": "assets/models_web/017_4d939565/hi3d.glb",
+    "meshy": "assets/models_web/017_4d939565/meshy.glb",
+    "rodin": "assets/models_web/017_4d939565/rodin.glb",
+    "tripo": "assets/models_web/017_4d939565/tripo.glb"
    },
    "previews": {
-    "hi3d30": "assets/previews/001_4a492408/hi3d30.jpg",
-    "hi3d": "assets/previews/001_4a492408/hi3d.jpg",
-    "meshy": "assets/previews/001_4a492408/meshy.jpg",
-    "rodin": "assets/previews/001_4a492408/rodin.jpg",
-    "tripo": "assets/previews/001_4a492408/tripo.jpg"
+    "hi3d30": "assets/previews/017_4d939565/hi3d30.jpg",
+    "hi3d": "assets/previews/017_4d939565/hi3d.jpg",
+    "meshy": "assets/previews/017_4d939565/meshy.jpg",
+    "rodin": "assets/previews/017_4d939565/rodin.jpg",
+    "tripo": "assets/previews/017_4d939565/tripo.jpg"
    }
   },
   {
-   "id": "002_1fcfc845",
-   "input": "assets/inputs_web/002_1fcfc845.jpg",
-   "thumb": "assets/thumbs/002_1fcfc845.jpg",
-   "textured": true,
+   "id": "018_269cbea5",
+   "input": "assets/inputs_web/018_269cbea5.jpg",
+   "thumb": "assets/thumbs/018_269cbea5.jpg",
+   "textured": false,
    "models": {
-    "hi3d30": "assets/models_web/002_1fcfc845/hi3d30.glb",
-    "hi3d": "assets/models_web/002_1fcfc845/hi3d.glb",
-    "meshy": "assets/models_web/002_1fcfc845/meshy.glb",
-    "rodin": "assets/models_web/002_1fcfc845/rodin.glb",
-    "tripo": "assets/models_web/002_1fcfc845/tripo.glb"
+    "hi3d30": "assets/models_web/018_269cbea5/hi3d30.glb",
+    "hi3d": "assets/models_web/018_269cbea5/hi3d.glb",
+    "meshy": "assets/models_web/018_269cbea5/meshy.glb",
+    "rodin": "assets/models_web/018_269cbea5/rodin.glb",
+    "tripo": "assets/models_web/018_269cbea5/tripo.glb"
    },
    "previews": {
-    "hi3d30": "assets/previews/002_1fcfc845/hi3d30.jpg",
-    "hi3d": "assets/previews/002_1fcfc845/hi3d.jpg",
-    "meshy": "assets/previews/002_1fcfc845/meshy.jpg",
-    "rodin": "assets/previews/002_1fcfc845/rodin.jpg",
-    "tripo": "assets/previews/002_1fcfc845/tripo.jpg"
+    "hi3d30": "assets/previews/018_269cbea5/hi3d30.jpg",
+    "hi3d": "assets/previews/018_269cbea5/hi3d.jpg",
+    "meshy": "assets/previews/018_269cbea5/meshy.jpg",
+    "rodin": "assets/previews/018_269cbea5/rodin.jpg",
+    "tripo": "assets/previews/018_269cbea5/tripo.jpg"
    }
   },
   {
@@ -344,63 +344,63 @@
    }
   },
   {
-   "id": "015_9b1f0f6d",
-   "input": "assets/inputs_web/015_9b1f0f6d.jpg",
-   "thumb": "assets/thumbs/015_9b1f0f6d.jpg",
+   "id": "016_1f5868b1",
+   "input": "assets/inputs_web/016_1f5868b1.jpg",
+   "thumb": "assets/thumbs/016_1f5868b1.jpg",
    "textured": false,
    "models": {
-    "hi3d30": "assets/models_web/015_9b1f0f6d/hi3d30.glb",
-    "hi3d": "assets/models_web/015_9b1f0f6d/hi3d.glb",
-    "meshy": "assets/models_web/015_9b1f0f6d/meshy.glb",
-    "rodin": "assets/models_web/015_9b1f0f6d/rodin.glb",
-    "tripo": "assets/models_web/015_9b1f0f6d/tripo.glb"
+    "hi3d30": "assets/models_web/016_1f5868b1/hi3d30.glb",
+    "hi3d": "assets/models_web/016_1f5868b1/hi3d.glb",
+    "meshy": "assets/models_web/016_1f5868b1/meshy.glb",
+    "rodin": "assets/models_web/016_1f5868b1/rodin.glb",
+    "tripo": "assets/models_web/016_1f5868b1/tripo.glb"
    },
    "previews": {
-    "hi3d30": "assets/previews/015_9b1f0f6d/hi3d30.jpg",
-    "hi3d": "assets/previews/015_9b1f0f6d/hi3d.jpg",
-    "meshy": "assets/previews/015_9b1f0f6d/meshy.jpg",
-    "rodin": "assets/previews/015_9b1f0f6d/rodin.jpg",
-    "tripo": "assets/previews/015_9b1f0f6d/tripo.jpg"
+    "hi3d30": "assets/previews/016_1f5868b1/hi3d30.jpg",
+    "hi3d": "assets/previews/016_1f5868b1/hi3d.jpg",
+    "meshy": "assets/previews/016_1f5868b1/meshy.jpg",
+    "rodin": "assets/previews/016_1f5868b1/rodin.jpg",
+    "tripo": "assets/previews/016_1f5868b1/tripo.jpg"
    }
   },
   {
-   "id": "017_4d939565",
-   "input": "assets/inputs_web/017_4d939565.jpg",
-   "thumb": "assets/thumbs/017_4d939565.jpg",
-   "textured": false,
+   "id": "001_4a492408",
+   "input": "assets/inputs_web/001_4a492408.jpg",
+   "thumb": "assets/thumbs/001_4a492408.jpg",
+   "textured": true,
    "models": {
-    "hi3d30": "assets/models_web/017_4d939565/hi3d30.glb",
-    "hi3d": "assets/models_web/017_4d939565/hi3d.glb",
-    "meshy": "assets/models_web/017_4d939565/meshy.glb",
-    "rodin": "assets/models_web/017_4d939565/rodin.glb",
-    "tripo": "assets/models_web/017_4d939565/tripo.glb"
+    "hi3d30": "assets/models_web/001_4a492408/hi3d30.glb",
+    "hi3d": "assets/models_web/001_4a492408/hi3d.glb",
+    "meshy": "assets/models_web/001_4a492408/meshy.glb",
+    "rodin": "assets/models_web/001_4a492408/rodin.glb",
+    "tripo": "assets/models_web/001_4a492408/tripo.glb"
    },
    "previews": {
-    "hi3d30": "assets/previews/017_4d939565/hi3d30.jpg",
-    "hi3d": "assets/previews/017_4d939565/hi3d.jpg",
-    "meshy": "assets/previews/017_4d939565/meshy.jpg",
-    "rodin": "assets/previews/017_4d939565/rodin.jpg",
-    "tripo": "assets/previews/017_4d939565/tripo.jpg"
+    "hi3d30": "assets/previews/001_4a492408/hi3d30.jpg",
+    "hi3d": "assets/previews/001_4a492408/hi3d.jpg",
+    "meshy": "assets/previews/001_4a492408/meshy.jpg",
+    "rodin": "assets/previews/001_4a492408/rodin.jpg",
+    "tripo": "assets/previews/001_4a492408/tripo.jpg"
    }
   },
   {
-   "id": "018_269cbea5",
-   "input": "assets/inputs_web/018_269cbea5.jpg",
-   "thumb": "assets/thumbs/018_269cbea5.jpg",
-   "textured": false,
+   "id": "002_1fcfc845",
+   "input": "assets/inputs_web/002_1fcfc845.jpg",
+   "thumb": "assets/thumbs/002_1fcfc845.jpg",
+   "textured": true,
    "models": {
-    "hi3d30": "assets/models_web/018_269cbea5/hi3d30.glb",
-    "hi3d": "assets/models_web/018_269cbea5/hi3d.glb",
-    "meshy": "assets/models_web/018_269cbea5/meshy.glb",
-    "rodin": "assets/models_web/018_269cbea5/rodin.glb",
-    "tripo": "assets/models_web/018_269cbea5/tripo.glb"
+    "hi3d30": "assets/models_web/002_1fcfc845/hi3d30.glb",
+    "hi3d": "assets/models_web/002_1fcfc845/hi3d.glb",
+    "meshy": "assets/models_web/002_1fcfc845/meshy.glb",
+    "rodin": "assets/models_web/002_1fcfc845/rodin.glb",
+    "tripo": "assets/models_web/002_1fcfc845/tripo.glb"
    },
    "previews": {
-    "hi3d30": "assets/previews/018_269cbea5/hi3d30.jpg",
-    "hi3d": "assets/previews/018_269cbea5/hi3d.jpg",
-    "meshy": "assets/previews/018_269cbea5/meshy.jpg",
-    "rodin": "assets/previews/018_269cbea5/rodin.jpg",
-    "tripo": "assets/previews/018_269cbea5/tripo.jpg"
+    "hi3d30": "assets/previews/002_1fcfc845/hi3d30.jpg",
+    "hi3d": "assets/previews/002_1fcfc845/hi3d.jpg",
+    "meshy": "assets/previews/002_1fcfc845/meshy.jpg",
+    "rodin": "assets/previews/002_1fcfc845/rodin.jpg",
+    "tripo": "assets/previews/002_1fcfc845/tripo.jpg"
    }
   },
   {
