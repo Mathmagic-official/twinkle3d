@@ -54,7 +54,7 @@ button { font: inherit; }
   font-weight: 600;
 }
 
-.brand img { width: 28px; height: 28px; }
+.brand img { height: 24px; width: auto; }
 
 .nav-links {
   display: flex;
