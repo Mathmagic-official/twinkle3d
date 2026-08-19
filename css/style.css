@@ -71,7 +71,8 @@ button { font: inherit; }
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent);
-  margin: 0 0 18px;
+  /* Tight: this line runs on into the wordmark, so the two read as one phrase. */
+  margin: 0 0 10px;
 }
 
 h1 {
