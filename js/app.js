@@ -92,32 +92,5 @@ window.addEventListener("keydown", (e) => {
   if (e.key === "ArrowLeft") select(index - 1);
 });
 
-/** Paste the video URL here once it is published; empty keeps the coming-soon state. */
-const VIDEO_URL = "";
-
-function revealMedia() {
-  if (!VIDEO_URL) return;
-
-  const slot = document.querySelector("#video-slot");
-  const local = /\.(mp4|webm|mov)(\?|$)/i.test(VIDEO_URL);
-  if (local) {
-    slot.className = "media-slot";
-    slot.innerHTML = `<video controls playsinline src="${VIDEO_URL}"></video>`;
-  } else {
-    slot.innerHTML = `
-      <strong>Video</strong>
-      <a class="btn primary" href="${VIDEO_URL}" target="_blank" rel="noreferrer">Watch</a>
-    `;
-  }
-
-  const btn = document.querySelector("#video-btn");
-  btn.classList.remove("soon");
-  btn.textContent = "Video";
-  btn.href = VIDEO_URL;
-  btn.target = "_blank";
-  btn.rel = "noreferrer";
-}
-
 renderGallery();
 select(0);
-revealMedia();

@@ -110,6 +110,18 @@ h1.twinkle { letter-spacing: -0.035em; }
   max-width: 44em;
 }
 
+/* 16:9 box so the player keeps its shape at any width and nothing below it jumps. */
+.hero-video {
+  margin: 24px 0 0;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+}
+
+.hero-video iframe { display: block; width: 100%; height: 100%; border: 0; }
+
 .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
 
 .btn {
@@ -124,7 +136,6 @@ h1.twinkle { letter-spacing: -0.035em; }
 }
 
 .btn.primary { background: var(--text); color: #161410; border-color: var(--text); }
-.btn.soon { color: var(--muted); }
 
 .section { padding: 64px 5vw; }
 .section.alt { background: var(--bg-2); }
@@ -436,41 +447,6 @@ h1.twinkle { letter-spacing: -0.035em; }
 .fig-stack { gap: 22px; }
 .fig-stack .figure { margin-bottom: 0; }
 
-/* Columns follow the number of slots, so dropping one does not leave a gap. */
-.soon-grid {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
-  gap: 16px;
-  max-width: var(--content);
-}
-
-.soon-box {
-  min-height: 220px;
-  border: 1px dashed var(--line);
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: var(--muted);
-  background: #14120e;
-  text-align: center;
-  padding: 24px;
-}
-
-.soon-box strong {
-  display: block;
-  color: var(--text);
-  font-family: var(--serif);
-  font-size: 22px;
-  margin-bottom: 6px;
-}
-
-.soon-box .btn { margin-top: 12px; }
-
-.media-slot video { width: 100%; min-height: 360px; border-radius: 16px; }
-
 .footer {
   padding: 32px 5vw 44px;
   border-top: 1px solid var(--line);
@@ -494,7 +470,6 @@ h1.twinkle { letter-spacing: -0.035em; }
 @media (max-width: 720px) {
   .nav { flex-wrap: wrap; }
   .fig-pair, .compare-wrap { grid-template-columns: 1fr; }
-  .soon-grid { grid-auto-flow: row; }
   .compare-row { grid-template-columns: 1fr; }
   .input-col { min-height: 220px; }
   .input-col, .cmp-pane { min-height: 320px; }
