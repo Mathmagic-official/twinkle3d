@@ -1,0 +1,9 @@
+.DS_Store
+Thumbs.db
+*.log
+
+# Scratch/source material that should not be published
+_promo/
+
+# Symlink to the full textured GLBs outside this tree; would publish as a dead link
+assets/models

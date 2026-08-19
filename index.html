@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Twinkle 3D — One image. One geometric twin.</title>
+  <meta name="description" content="Hi3D 3.0 (Twinkle 3D) is the next generation of image-to-3D geometry: object-specific fidelity at 2048³." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/fonts/fonts.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="#top">
+      <img src="assets/favicon.svg" alt="" />
+      Hi3D 3.0
+    </a>
+    <div class="nav-links">
+      <a href="#twin">Twin</a>
+      <a href="#demo">Compare</a>
+      <a href="#gallery">Cases</a>
+      <a href="#method">Method</a>
+      <a href="#media">Paper / Video</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <p class="kicker">Next generation of image-to-3D geometry · Hi3D 3.0</p>
+    <h1 class="twinkle">Twinkle 3D</h1>
+    <p class="tagline">One image. One geometric <span class="twinkle">twin</span>.</p>
+    <p class="lead">
+      <em>Basically the same</em> used to be the goal. It is now the baseline.
+      Given one image, today’s models return the right kind of object and the right overall look.
+      The harder question is whether the mesh is the same object — not a convincing stand-in from the same category.
+    </p>
+    <div class="actions">
+      <a class="btn primary" href="#demo">Compare 25 cases</a>
+      <a class="btn soon" id="paper-btn" href="#media">Paper · coming soon</a>
+      <a class="btn soon" id="video-btn" href="#media">Video · coming soon</a>
+    </div>
+  </header>
+
+  <section class="section" id="twin">
+    <h2>A geometric twin is more than a look-alike</h2>
+    <figure class="figure">
+      <img src="assets/figures/web/hero_twin.jpg" alt="Input photo of a calculator next to a look-alike reconstruction and a geometric twin" />
+    </figure>
+    <p class="section-lead">
+      The difference lives in details that barely change the silhouette yet define the object.
+      A missing stroke turns one character into another. A slight change in the features turns one face
+      into another person. Can the inscription on a plaque still be read, word for word? Does an industrial
+      part keep every hole, thread, and seam exactly where the image shows them? Do logos, grooves, and
+      repeated structures keep their exact shape, spacing, and alignment?
+    </p>
+    <p class="section-lead">
+      These features occupy a small fraction of the surface, yet they carry a disproportionate share of the
+      object’s identity and practical value. The next frontier is therefore not greater visual similarity.
+      It is <strong>exactness</strong>: a match that holds at every scale, sustained across millions of
+      geometric elements. That is the ambition behind Twinkle 3D — one image, one geometric twin.
+    </p>
+    <div class="fig-stack">
+      <figure class="figure">
+        <img src="assets/figures/web/twin_a.jpg" alt="Leather trunk input and its geometric twin" loading="lazy" />
+      </figure>
+      <figure class="figure">
+        <img src="assets/figures/web/twin_b.jpg" alt="Industrial pump housing input and its geometric twin" loading="lazy" />
+      </figure>
+      <figure class="figure">
+        <img src="assets/figures/web/twin_c.jpg" alt="Commemorative medal input and its geometric twin" loading="lazy" />
+      </figure>
+    </div>
+  </section>
+
+  <section class="section alt" id="demo">
+    <div class="section-head">
+      <div>
+        <h2>Hi3D 3.0 versus other image-to-3D systems</h2>
+        <p class="section-lead">
+          Hi3D 3.0 on the left, your pick of the other systems on the right. Drag either mesh to orbit it
+          on its own, scroll to zoom, or close the lock to rotate both at once. Meshes are untextured
+          so the comparison is geometry, not shading. Arrow keys step through 25 cases.
+        </p>
+      </div>
+      <div class="demo-tools">
+        <span id="case-meta" class="case-meta">01 / 25</span>
+        <button class="chip lock" id="sync-toggle" aria-pressed="false" title="Rotate both views together">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path class="shackle" d="M8 10V7a4 4 0 0 1 8 0v3" />
+            <rect x="5" y="10" width="14" height="10" rx="2" />
+          </svg>
+          <span>Sync rotation</span>
+        </button>
+        <button class="chip" id="front-view">Front view</button>
+        <button class="chip active" id="rotate-toggle">Auto rotate</button>
+        <button class="chip" id="prev-case">Prev</button>
+        <button class="chip" id="next-case">Next</button>
+      </div>
+    </div>
+
+    <div class="compare-wrap">
+      <figure class="input-col">
+        <div class="pane-head"><span class="pane-tag">Input</span></div>
+        <img id="input-image" alt="Input image" />
+      </figure>
+      <div class="compare-row" id="compare-row"></div>
+    </div>
+    <div class="case-strip" id="case-strip"></div>
+  </section>
+
+  <section class="section" id="gallery">
+    <h2>Scan all 25 cases</h2>
+    <p class="section-lead">
+      Still frames first — input plus every method — so you can skim without clicking through live meshes.
+      Click a row to open it in the interactive compare above.
+    </p>
+    <div class="scan" id="gallery"></div>
+  </section>
+
+  <section class="section alt" id="method">
+    <h2>Fidelity begins with the representation</h2>
+    <p class="section-lead">
+      Object-specific fidelity cannot be added back at the end of the pipeline. It has to survive
+      representation and compression before generation even begins. The geometry representation sets the
+      ceiling on what a model can express; the VAE decides how much of that survives. Once thin walls,
+      sharp edges, or fine engravings are discarded during encoding, no downstream model — however large —
+      can recover information that is no longer there.
+    </p>
+    <p class="section-lead">
+      Hi3D 1.0, also known as Sparc3D, showed that a compact latent space need not sacrifice geometric
+      fidelity, reconstructing accurately at 8× compression. Later approaches such as FaithC/Ovoxel, used in
+      Trellis2, moved past SDF as an intermediate representation and pushed reconstruction further. Two
+      failure modes still remain: these representations do not inherently guarantee a <strong>watertight</strong>
+      mesh, and when a single voxel must encode several disconnected surface patches the local geometry can
+      exceed its capacity — the <strong>multi-shell problem</strong>, visible as interpenetrating surfaces,
+      irregular boundaries, or missing detail in thin walls and tight part junctions. Twinkle 3D addresses both
+      at the system level, combining 2048³ Ovoxel reconstruction fidelity with watertight, printable output.
+    </p>
+    <div class="fig-pair">
+      <figure class="figure">
+        <img src="assets/figures/web/watertight.jpg" alt="VAE reconstruction of a car compared across Sparc3D, Trellis2.0 and Twinkle 3D" loading="lazy" />
+      </figure>
+      <figure class="figure">
+        <img src="assets/figures/web/multishell.jpg" alt="VAE reconstruction of a bow and arrow compared across Sparc3D, Trellis2.0 and Twinkle 3D" loading="lazy" />
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="scale">
+    <h2>At 2048³, scalability is the real challenge</h2>
+    <p class="section-lead">
+      Reconstructing an existing mesh at 2048³ and generating one from a single image are fundamentally
+      different problems. A single training sample carries roughly <strong>300,000 to 400,000 tokens</strong>.
+      For a conventional DiT, that sequence length drives up computation, memory, inter-device communication,
+      and data throughput at once — a straightforward implementation spends about ten minutes per training
+      iteration, which never accumulates the optimization steps convergence needs.
+    </p>
+    <p class="section-lead">
+      Twinkle 3D was therefore developed as a joint design of the generation network and the training system:
+      computation reorganized over large geometry-token sequences, and distributed execution tuned at
+      thousand-GPU scale. That brought an iteration down to roughly <strong>10 seconds</strong>, turning 2048³
+      from a resolution the representation can merely hold into one the model can actually learn at scale.
+    </p>
+  </section>
+
+  <section class="section alt" id="stage">
+    <h2>Fine detail starts in the first stage</h2>
+    <p class="section-lead">
+      Multi-stage generation makes it tempting to assume the first stage only needs the coarse shape right.
+      Our findings suggest otherwise. Even with a correct silhouette, subtle errors in local curvature,
+      boundary placement, wall thickness, or part spacing change the foundation every later detail is built on.
+      Quantization error introduced here is not neutral — it propagates and can be reinforced during refinement,
+      so a later stage may produce a sharper detail in the wrong position, shape, or proportion.
+    </p>
+    <p class="section-lead">
+      Single-stage accuracy therefore became a primary objective. Twinkle 3D’s single-stage model surpasses
+      a pipeline combining first-stage generation with 512³ second-stage refinement.
+    </p>
+    <div class="fig-stack">
+      <figure class="figure">
+        <img src="assets/figures/web/stage1_a.jpg" alt="Stage-1 comparison, warrior" loading="lazy" />
+      </figure>
+      <figure class="figure">
+        <img src="assets/figures/web/stage1_b.jpg" alt="Stage-1 comparison, rider" loading="lazy" />
+      </figure>
+      <figure class="figure">
+        <img src="assets/figures/web/stage1_c.jpg" alt="Stage-1 comparison, lunging swordsman" loading="lazy" />
+      </figure>
+    </div>
+    <p class="section-lead close">
+      Beyond shortening the pipeline, this gives the final 2048³ pass a more accurate geometric foundation.
+    </p>
+  </section>
+
+  <section class="section" id="upgrade">
+    <h2>Hi3D 3.0 is more than a resolution upgrade</h2>
+    <p class="section-lead">
+      Only when high-fidelity representation, scalable training, and accurate first-stage generation are
+      addressed together does 2048³ become more than a nominal figure. On top of that we introduce a more
+      effective cross-modal interaction mechanism between image and 3D representations, substantially
+      improving image–3D consistency.
+    </p>
+    <p class="section-lead">
+      Across challenging inputs we see multiple subjects in large scenes generated with greater completeness;
+      text, engravings, and fine reliefs better preserved; and local structures on complex objects clearer
+      and more stable. <strong>One image. One geometric twin.</strong>
+    </p>
+    <div class="fig-pair tight">
+      <figure class="figure">
+        <img src="assets/figures/web/detail_1.jpg" alt="Multi-view reconstructions of complex character and sculpture assets" loading="lazy" />
+      </figure>
+      <figure class="figure">
+        <img src="assets/figures/web/detail_2.jpg" alt="Multi-view reconstructions of vessel, sculpture, and machine" loading="lazy" />
+      </figure>
+    </div>
+  </section>
+
+  <section class="section alt" id="media">
+    <h2>Paper and video</h2>
+    <div class="soon-grid">
+      <div class="soon-box" id="video-slot">
+        <strong>Video</strong>
+        Coming soon
+      </div>
+      <div class="soon-box">
+        <strong>Technical report</strong>
+        Coming soon
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>Hi3D 3.0 · Twinkle 3D</span>
+    <span>Interactive meshes are Draco-compressed GLBs · 25 showcase cases</span>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
