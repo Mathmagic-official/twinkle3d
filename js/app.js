@@ -1,6 +1,7 @@
 import { CompareView } from "./viewer.js";
 
-const data = await fetch("data/cases.json").then((r) => r.json());
+// GitHub Pages serves this with max-age=600; revalidate so case edits show up at once.
+const data = await fetch("data/cases.json", { cache: "no-cache" }).then((r) => r.json());
 const cases = data.cases;
 const methods = data.methods;
 
