@@ -10,7 +10,7 @@ let index = 0;
 const inputImage = document.querySelector("#input-image");
 const caseMeta = document.querySelector("#case-meta");
 const strip = document.querySelector("#case-strip");
-const gallery = document.querySelector("#gallery");
+const gallery = document.querySelector("#scan-rows");
 const rotateBtn = document.querySelector("#rotate-toggle");
 
 const view = new CompareView({ methods });

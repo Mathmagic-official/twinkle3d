@@ -62,13 +62,12 @@ button { font: inherit; }
 .nav-links a { text-decoration: none; color: var(--muted); }
 .nav-links a:hover { color: var(--text); }
 
-/* The copy keeps its measure, but the hero itself spans the page so the video can
-   centre against the full width rather than against the left-hand text column. */
-.hero { padding: 72px 5vw 28px; }
+/* Spans the page, so every child centres against the full width. */
+.hero { padding: 72px 5vw 28px; text-align: center; }
 
 .hero > .kicker,
 .hero > h1,
-.hero > .tagline { max-width: 920px; }
+.hero > .tagline { max-width: 920px; margin-inline: auto; }
 
 .kicker {
   font-family: var(--mono);
@@ -132,29 +131,7 @@ h1.twinkle { letter-spacing: -0.035em; }
 
 .hero-video iframe { display: block; width: 100%; height: 100%; border: 0; }
 
-/* Follows the centred video rather than stranding itself back at the left margin. */
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 22px;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  min-height: 42px;
-  padding: 0 16px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.btn.primary { background: var(--text); color: #161410; border-color: var(--text); }
-
-.section { padding: 64px 5vw; }
+.section { padding: 64px 5vw; text-align: center; }
 .section.alt { background: var(--bg-2); }
 
 .section h2 {
@@ -166,26 +143,28 @@ h1.twinkle { letter-spacing: -0.035em; }
 }
 
 .section-lead {
-  max-width: var(--content);
+  max-width: 68ch;
   color: var(--muted);
   font-size: 17.5px;
   line-height: 1.75;
-  margin: 0 0 22px;
+  /* Narrower than the figures it introduces: centred text needs a shorter measure. */
+  margin: 0 auto 22px;
 }
 .section-lead strong { color: var(--text); font-weight: 600; }
 .section-lead.close { margin-top: 28px; }
 
+/* Stacked and centred: the toolbar sits under the copy instead of beside it. */
 .section-head {
   display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  align-items: end;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
   margin-bottom: 18px;
 }
 
 .section-head .section-lead { margin-bottom: 0; }
 
-.demo-tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.demo-tools { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; align-items: center; }
 .case-meta { font-family: var(--mono); font-size: 12px; color: var(--accent-2); margin-right: 6px; }
 
 .chip {
@@ -442,7 +421,7 @@ h1.twinkle { letter-spacing: -0.035em; }
 
 /* Cap plates near their native pixel width; on wide screens full bleed just upscales them. */
 .figure {
-  margin: 0 0 22px;
+  margin: 0 auto 22px;
   max-width: var(--content);
 }
 .figure img {
@@ -456,6 +435,7 @@ h1.twinkle { letter-spacing: -0.035em; }
   display: grid;
   gap: 16px;
   max-width: var(--content);
+  margin-inline: auto;
 }
 .fig-pair { grid-template-columns: 1fr 1fr; }
 .fig-pair.tight { gap: 28px; }
@@ -470,8 +450,9 @@ h1.twinkle { letter-spacing: -0.035em; }
   color: var(--muted);
   font-size: 13px;
   display: flex;
-  justify-content: space-between;
-  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
 }
 
 @media (max-width: 1100px) {
