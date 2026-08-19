@@ -62,7 +62,13 @@ button { font: inherit; }
 .nav-links a { text-decoration: none; color: var(--muted); }
 .nav-links a:hover { color: var(--text); }
 
-.hero { padding: 72px 5vw 28px; max-width: 920px; }
+/* The copy keeps its measure, but the hero itself spans the page so the video can
+   centre against the full width rather than against the left-hand text column. */
+.hero { padding: 72px 5vw 28px; }
+
+.hero > .kicker,
+.hero > h1,
+.hero > .tagline { max-width: 920px; }
 
 .kicker {
   font-family: var(--mono);
@@ -106,13 +112,17 @@ h1.twinkle { letter-spacing: -0.035em; }
   color: #d8d1c3;
   font-size: 18px;
   line-height: 1.6;
-  margin: 0 0 16px;
-  max-width: 44em;
+  /* Centred on the page, above the video it introduces. The measure tightens from
+     44em because ragged-both-sides text needs shorter lines to stay readable. */
+  margin: 0 auto;
+  max-width: 38em;
+  text-align: center;
 }
 
 /* 16:9 box so the player keeps its shape at any width and nothing below it jumps. */
 .hero-video {
-  margin: 24px 0 0;
+  margin: 26px auto 30px;
+  max-width: 900px;
   aspect-ratio: 16 / 9;
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -122,7 +132,14 @@ h1.twinkle { letter-spacing: -0.035em; }
 
 .hero-video iframe { display: block; width: 100%; height: 100%; border: 0; }
 
-.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+/* Follows the centred video rather than stranding itself back at the left margin. */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 22px;
+}
 
 .btn {
   display: inline-flex;
