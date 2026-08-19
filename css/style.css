@@ -439,9 +439,11 @@ h1.twinkle { letter-spacing: -0.035em; }
 .fig-stack { gap: 22px; }
 .fig-stack .figure { margin-bottom: 0; }
 
+/* Columns follow the number of slots, so dropping one does not leave a gap. */
 .soon-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
   gap: 16px;
   max-width: var(--content);
 }
@@ -494,7 +496,8 @@ h1.twinkle { letter-spacing: -0.035em; }
 
 @media (max-width: 720px) {
   .nav { flex-wrap: wrap; }
-  .fig-pair, .soon-grid, .compare-wrap { grid-template-columns: 1fr; }
+  .fig-pair, .compare-wrap { grid-template-columns: 1fr; }
+  .soon-grid { grid-auto-flow: row; }
   .compare-row { grid-template-columns: 1fr; }
   .input-col { min-height: 220px; }
   .input-col, .cmp-pane { min-height: 320px; }
